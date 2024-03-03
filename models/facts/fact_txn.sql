@@ -2,7 +2,7 @@ with txn_ranked as (
     select
         *,
         row_number() over (partition by date order by amount) as rank
-    from {{ ref("txn") }}
+    from {{ source("bank", "txn") }}
 )
 
 select

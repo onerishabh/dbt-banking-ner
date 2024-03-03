@@ -27,7 +27,7 @@ txns as (
         coalesce(dim_event.event, 'N/A') as event
     from {{ ref("fact_txn") }} txn
     inner join days_ranked on txn.date = days_ranked.date
-    left join {{ ref("dim_event") }} dim_event on txn.date = dim_event.date
+    left join {{ source("date", "dim_event") }} dim_event on txn.date = dim_event.date
     order by rank
 )
 

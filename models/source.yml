@@ -6,8 +6,11 @@ sources:
     schema: main    
     tables:
       - name: txn
-      - name: dim_events
-      - name: dim_ner
+  - name: date
+    database: dbt
+    schema: main    
+    tables:
+      - name: dim_event
   - name: ml
     database: dbt
     schema: main    
