@@ -20,7 +20,7 @@ def ner_tags(description: str):
     df = pd.DataFrame(ner_results)
 
     df["entity"] = df["entity"].apply(lambda x: x.split("-")[1])
-    print(df.head(10))
+    # print(df.head(10))
 
     # group by entity and get max score
     # select entity, max(score) from df group by 1
@@ -40,7 +40,7 @@ def generate_dim_ner(duck_db_file="dbt.duckdb"):
     
     df["ner_tags"] = df["Desc"].apply(ner_tags)
 
-    print(df.head())
+    # print(df.head())
 
     conn.sql("create or replace table dim_ner as select * from df")
     print("dim_ner created successfully")
