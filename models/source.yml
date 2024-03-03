@@ -8,4 +8,9 @@ sources:
       - name: txn
       - name: dim_events
       - name: dim_ner
+  - name: ml
+    database: dbt
+    schema: main    
+    tables:
+      - name: dim_ner
 

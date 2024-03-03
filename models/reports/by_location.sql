@@ -8,7 +8,7 @@ with txn as (
 ner_tags as (
     select
         *
-    from {{ source("bank", "dim_ner") }}
+    from {{ source("ml", "dim_ner") }}
 ),
 
 txn_tags_joined as (
