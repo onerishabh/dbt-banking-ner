@@ -5,3 +5,8 @@ This project creates a few reports based on personal banking transactions using 
 
 Further, `Named Entity Recognition` is used identity name of the shop and the location of transaction based on transaction description. Python API for DuckDB is used to persist the results back into the database and do ML inference. 
 
+## Named Entity Recognition
+![ner](images/ner_example.png)
+
+# dbt DAG
+![dbt](images/dbt_dag.png)
