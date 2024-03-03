@@ -35,10 +35,14 @@ models:
     # Config indicated by + and applies to all files under models/example/
     facts:
       +materialized: table
+      +docs:
+        node_color: yellow
     reports:
       +materialized: view
       +post-hook:
         - "copy (select * from {{ this }}) to 'files/{{ this.name }}.csv' (HEADER, DELIMITER ',');"
+      +docs:
+        node_color: orange
 
 seeds:
   +database: dbt
