@@ -1,0 +1,10 @@
+
+target/
+dbt_packages/
+logs/
+
+*.csv
+.venv/
+.user.yml
+package-lock.yml
+*.duckdb

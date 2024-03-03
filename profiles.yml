@@ -1,0 +1,7 @@
+personal_finance:
+  outputs:
+    local:
+      path: "dbt.duckdb"
+      database: dbt
+      type: duckdb
+  target: local
