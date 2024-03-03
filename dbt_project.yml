@@ -36,7 +36,7 @@ models:
     facts:
       +materialized: table
       +docs:
-        node_color: yellow
+        node_color: blue
     reports:
       +materialized: view
       +post-hook:
